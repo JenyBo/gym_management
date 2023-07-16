@@ -1,0 +1,185 @@
+.logo{
+    -fx-background-color: #fff;
+}
+
+.login{
+    -fx-background-color: #ffcc00;
+
+}
+
+.text-field{
+	-fx-border-color: black;
+}
+
+.choice-box {
+    -fx-background-radius: 10px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.choice-box .button {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: black;
+    -fx-padding: 0;
+}
+
+.choice-box .label {
+    -fx-text-fill: black;
+}
+
+.choice-box .arrow {
+    -fx-background-color: black;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: #FCF7DE;
+    -fx-border-color: transparent;
+}
+
+.choice-box .context-menu .menu-item {
+    -fx-background-color: #FCF7DE;
+    -fx-text-fill: black;
+    -fx-border-color: transparent;
+}
+
+.choice-box .context-menu .menu-item:hover {
+    -fx-background-color: #EBE1B9;
+}
+
+.choice-box:focused,
+.choice-box .button:focused,
+.choice-box .button:hover {
+    -fx-border-color: black; /* Replace 'red' with your desired color */
+}
+
+
+.combo-box:focused {
+    -fx-border-color: #EBE1B9;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #FCF7DE;
+    -fx-text-fill: black;
+    -fx-border-color: #EBE1B9;
+}
+
+.combo-box .list-cell:filled:selected,
+.combo-box .list-cell:filled:selected:hover {
+    -fx-background-color: #FCF7DE;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+}
+
+.date-picker-popup .text-field:showing:focused {
+    -fx-background-color: #FCF7DE;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+}
+
+.date-picker-popup .day-cell:hover,
+.date-picker-popup .date-cell:hover {
+    -fx-background-color: #FCF7DE;
+    -fx-text-fill: black;
+    -fx-border-color: #EBE1B9;
+}
+
+.button{
+    -fx-background-color: #fff;
+    -fx-text-fill: #333;
+}
+
+.button:focused{
+    -fx-text-fill: black ;
+    -fx-background-color: #FCF7DE ;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.btn{
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-text-fill: black;
+}
+
+.btn:focused{
+    -fx-font-size: 12px;
+    -fx-border-color: black;
+}
+
+.text-input:focused {
+    -fx-border-color: black;
+}
+
+.button:hover{
+    -fx-text-fill: black;
+    -fx-background-color: #EBE1B9;
+}
+
+.sidebar{
+    -fx-background-color: #fff;
+}
+.btn_primary{
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-background-color: #FCF7DE;
+
+    -fx-text-fill: black;
+}
+.btn_primary:hover{
+    -fx-background-color: #EBE1B9;
+    -fx-font-size: 12px;
+
+    -fx-text-fill: black;
+}
+.btn_primary:focused{
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-background-color: #FCF7DE;
+    -fx-font-size: 12px;
+
+    -fx-text-fill: black;
+}
+
+/* #menuButton:hover{
+    -fx-background-color:#efe9ff ;
+
+} */
+/* .active{
+    -fx-text-fill: #7942fe ;
+    -fx-background-color: #efe9ff ;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-background-color: #FCF7DE;
+
+    -fx-text-fill: #fff;
+} */
+
+
+.danger{
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-border-color: #fc0404;
+
+    -fx-text-fill: #fc0404;
+
+}
+
+
+.danger :hover{
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-border-color: #fc0404;
+    -fx-background-color:#dab8b8 ;
+    -fx-text-fill: #fc0404;
+
+}
+
+.text-field{
+    /* -fx-border-radius:10px; */
+    /* -fx-background-color:transparent; */
+    -fx-font-family: Segoe UI;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    /* -fx-border-color: #3f4d67; */
+}

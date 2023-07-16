@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="basePane" maxHeight="600.0" maxWidth="800.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/global.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.screen.thietbi.ThietBiScreenHandler">
+   <children>
+      <Text layoutX="38.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thiết bị" textAlignment="CENTER" wrappingWidth="140.9140625">
+         <font>
+            <Font name="Segoe UI" size="24.0" />
+         </font>
+      </Text>
+      <Pagination fx:id="pagination" layoutX="38.0" layoutY="138.0" maxPageIndicatorCount="5" prefHeight="433.0" prefWidth="577.0" />
+      <TableView fx:id="tableView" layoutX="38.0" layoutY="128.0" prefHeight="412.0" prefWidth="577.0" stylesheets="@../styles/table.css">
+         <columns>
+            <TableColumn fx:id="indexColumn" prefWidth="31.200008392333984" text="#" />
+            <TableColumn fx:id="tenThietBiColumn" prefWidth="155.5" text="Tên thiết bị" />
+            <TableColumn fx:id="ngayNhapVeColumn" prefWidth="101.5" text="Ngày nhập về" />
+            <TableColumn prefWidth="106.0" text="Xuất xứ" fx:id="xuatXuColumn" />
+            <TableColumn fx:id="tinhTrangColumn" prefWidth="75.0" text="Tình trạng" />
+            <TableColumn fx:id="oPhongColumn" prefWidth="105.5" text="Ở phòng" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchTextField" layoutX="37.0" layoutY="77.0" onMouseClicked="#search" prefHeight="26.0" prefWidth="205.0" promptText="Lọc theo tên">
+         <font>
+            <Font name="Segoe UI Italic" size="14.0" />
+         </font>
+      </TextField>
+      <VBox layoutX="634.0" layoutY="128.0" prefHeight="197.0" prefWidth="160.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addThietBi" prefWidth="120.0" styleClass="btn" text="Thêm mới" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteThietBi" prefHeight="28.0" prefWidth="120.0" styleClass="btn" text="Xoá" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

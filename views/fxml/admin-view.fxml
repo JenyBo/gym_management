@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/global.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.screen.admin.AdminScreenHandler">
+   <children>
+      <HBox layoutX="-1.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="190.0" stylesheets="@../styles/navigation-styles.css">
+               <children>
+                  <VBox fx:id="VBoxButton" alignment="TOP_CENTER" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="601.0" prefWidth="248.0" styleClass="sidebar" stylesheets="@../../../assets/styles/global.css">
+                     <children>
+                        <ImageView fitHeight="76.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/logo.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="16.0" left="8.0" right="8.0" top="8.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button id="menuButton" fx:id="trangChuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToTrangChu" prefHeight="42.0" prefWidth="223.0" text="Trang chủ" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="menuButton" fx:id="hoiVienButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToHoiVien" prefHeight="42.0" prefWidth="233.0" text="Hội viên" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/member.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="menuButton" fx:id="phongTapButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToPhongTap" prefHeight="42.0" prefWidth="244.0" text="Phòng tập" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/room.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="menuButton" fx:id="thietBiButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToThietBi" prefHeight="42.0" prefWidth="237.0" text="Thiết bị" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/facility.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="menuButton" fx:id="nhanVienButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToNhanVien" prefHeight="43.0" prefWidth="216.0" text="Nhân viên" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/staff.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="menuButton" fx:id="goiTapButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToGoiTap" prefHeight="42.0" prefWidth="223.0" text="Gói tập" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/goitap.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button id="menuButton" fx:id="thuPhiButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToThuPhi" prefHeight="42.0" prefWidth="223.0" text="Thu Phí" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/fee.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button id="menuButton" fx:id="phanHoiButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToPhanHoi" prefHeight="42.0" prefWidth="223.0" text="Phản hồi" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/feedback.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button id="menuButton" fx:id="thongKeButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToThongKe" prefHeight="40.0" prefWidth="216.0" text="Thống kê" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/statistic.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button id="menuButton" fx:id="goiTapDaDangKiButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToGoiTapDaDangKi" prefHeight="42.0" prefWidth="223.0" text="Gói tập đã đăng kí" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/bought.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button id="menuButton" fx:id="lichSuDiTapButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToLichSuDiTap" prefHeight="42.0" prefWidth="223.0" text="Lịch sử đi tập" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/history.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button id="menuButton" fx:id="thayDoiMatKhauButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToThayDoiMatKhau" prefHeight="42.0" prefWidth="223.0" text="Thay đổi mật khẩu" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/password.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button id="menuButton" fx:id="dangXuatButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="42.0" prefWidth="223.0" text="Đăng xuất" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <VBox>
+               <children>
+                  <AnchorPane fx:id="basePane" prefHeight="718.0" prefWidth="800.0" style="-fx-background-color: #EBE1B9;">
+                     <children>
+                        <BarChart fx:id="facilityChart" barGap="2.0" categoryGap="8.0" layoutX="21.0" layoutY="203.0" prefHeight="332.0" prefWidth="471.0" stylesheets="@../styles/bar-chart.css" title="Thống kê">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" stylesheets="@../styles/bar-chart.css" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </BarChart>
+                        <HBox layoutX="6.0" layoutY="64.0" prefHeight="111.0" prefWidth="789.0">
+                           <children>
+                              <Pane>
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" stroke="#b9bdbf" strokeType="OUTSIDE" width="143.0" x="10.0" />
+                                    <Label layoutX="72.0" layoutY="58.0" prefHeight="24.0" prefWidth="70.0" text="Hội viên" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/img/member.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoiVienLabel" alignment="BASELINE_CENTER" layoutX="77.0" layoutY="17.0" prefHeight="33.0" prefWidth="60.0" text="1000" textAlignment="CENTER" textFill="#1bbde4">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane>
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" stroke="#b9bdbf" strokeType="OUTSIDE" width="143.0" x="10.0" />
+                                    <Label layoutX="72.0" layoutY="58.0" prefHeight="24.0" prefWidth="70.0" text="Phòng tập" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/img/room.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="phongTapLabel" alignment="BASELINE_CENTER" layoutX="77.0" layoutY="17.0" prefHeight="33.0" prefWidth="60.0" text="1000" textAlignment="CENTER" textFill="#1bbde4">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane>
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" stroke="#b9bdbf" strokeType="OUTSIDE" width="143.0" x="10.0" />
+                                    <Label layoutX="72.0" layoutY="58.0" prefHeight="24.0" prefWidth="70.0" text="Nhân viên" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/img/staff.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="nhanVienLabel" alignment="BASELINE_CENTER" layoutX="77.0" layoutY="17.0" prefHeight="33.0" prefWidth="60.0" text="1000" textAlignment="CENTER" textFill="#1bbde4">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane>
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" stroke="#b9bdbf" strokeType="OUTSIDE" width="143.0" x="10.0" />
+                                    <Label layoutX="82.0" layoutY="56.0" prefHeight="24.0" prefWidth="60.0" text="Gói tập" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/img/goitap.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="goiTapLabel" alignment="BASELINE_CENTER" layoutX="77.0" layoutY="17.0" prefHeight="33.0" prefWidth="60.0" text="1000" textAlignment="CENTER" textFill="#1bbde4">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane>
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" stroke="#b9bdbf" strokeType="OUTSIDE" width="143.0" x="10.0" />
+                                    <Label layoutX="82.0" layoutY="56.0" prefHeight="24.0" prefWidth="70.0" text="Thiết bị" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/img/facility.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="thietBiLabel" alignment="BASELINE_CENTER" layoutX="77.0" layoutY="17.0" prefHeight="33.0" prefWidth="60.0" text="1000" textAlignment="CENTER" textFill="#1bbde4">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <VBox alignment="TOP_CENTER" layoutX="567.0" layoutY="254.0" prefHeight="211.0" prefWidth="192.0">
+                           <children>
+                              <Label alignment="BASELINE_CENTER" prefHeight="39.0" prefWidth="182.0" text="Xin Chào">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="18.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="usernameLabel" alignment="BASELINE_CENTER" prefHeight="39.0" prefWidth="182.0" text="Hoàng Danh Quân" textFill="#1bbde4">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="18.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Line endX="50.0" startX="-50.0" stroke="#b9bdbf" />
+                              <Label alignment="BASELINE_CENTER" prefHeight="39.0" prefWidth="182.0" text="&quot;Make everything simple&quot;" textFill="#5c7878">
+                                 <font>
+                                    <Font name="System Italic" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="18.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Line endX="50.0" startX="-50.0" stroke="#b9bdbf" />
+                           </children>
+                        </VBox>
+                        <Text layoutX="21.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trang chủ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

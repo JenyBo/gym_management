@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/global.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.screen.lichsuditap.LichSuDiTapScreenHandler">
+   <children>
+      <Text layoutX="33.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lịch sử đi tập" textAlignment="CENTER" wrappingWidth="213.9140625">
+         <font>
+            <Font name="Segoe UI" size="24.0" />
+         </font>
+      </Text>
+      <Pagination fx:id="pagination" layoutX="38.0" layoutY="128.0" maxPageIndicatorCount="5" prefHeight="439.0" prefWidth="740.0" />
+      <TableView fx:id="tableView" layoutX="38.0" layoutY="128.0" stylesheets="@../styles/table.css">
+         <columns>
+            <TableColumn fx:id="indexColumn" prefWidth="31.200008392333984" text="#" />
+            <TableColumn fx:id="hoVaTenColumn" prefWidth="150.0" text="Họ và tên hội viên" />
+            <TableColumn fx:id="tenGoiTapColumn" prefWidth="195.5" text="Tên gói tập" />
+            <TableColumn fx:id="tenPhongTapColumn" prefWidth="179.5" text="Tên phòng tập" />
+            <TableColumn fx:id="ngaySuDungColumn" prefWidth="181.0" text="Ngày sử dụng" />
+         </columns>
+      </TableView>
+      <DatePicker fx:id="fromDatePicker" layoutX="148.0" layoutY="78.0" onMouseClicked="#filter" />
+      <DatePicker fx:id="toDatePicker" layoutX="526.0" layoutY="78.0" onMouseClicked="#filter" />
+      <Label layoutX="65.0" layoutY="79.0" text="Từ ngày">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="424.0" layoutY="79.0" prefHeight="27.0" prefWidth="83.0" text="Đến ngày">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

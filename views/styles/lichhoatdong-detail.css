@@ -1,0 +1,19 @@
+.choice-box {
+    -fx-pref-width: 127;
+}
+
+.choice-box .context-menu {
+    -fx-pref-width: 127;
+}
+.button{
+    -fx-background-color: #fff;
+    -fx-text-fill: #333;
+    
+}
+
+.button:focused{
+    -fx-text-fill: #0284c7 ;
+    -fx-background-color: #bae6fd ;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}

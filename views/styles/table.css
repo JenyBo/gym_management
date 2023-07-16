@@ -1,0 +1,84 @@
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: #d4c6bb;
+}
+.table-view .column-header .label{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-alignment: BASELINE-CENTER;
+}
+.table-view .cell{
+    -fx-cell-size: 35;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-alignment: BASELINE-CENTER;
+
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #FCF7DE !important;
+
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #FCF7DE !important;
+}
+
+.table-row-cell:selected .cell{
+    -fx-border-color: transparent !important;
+}
+/*.table-row-cell:selected .text {*/
+/*    -fx-fill: black;*/
+/*}*/
+
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 2em;
+    -fx-padding:1;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track{
+    -fx-background-color: transparent;
+    -fx-border-color:#EBE1B9;
+    -fx-padding:1;
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb{
+    -fx-background-color:#EBE1B9;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+    -fx-pref-width: 2px;
+
+
+
+}
+
+.table-view *.scroll-bar:vertical *.increment-button,
+.table-view *.scroll-bar:vertical *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-pref-width: 2px;
+
+
+}
+
+.table-view *.scroll-bar:vertical *.increment-arrow,
+.table-view *.scroll-bar:vertical *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+    -fx-pref-width: 2px;
+
+}
